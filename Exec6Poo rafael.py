@@ -18,4 +18,13 @@ class ContaCorrente:
         self.saldo += vSaque
         return self.saldo
             
-CC = ContaCorrente (1000 , 'Rafael dos Santos')
+
+ContaCorrente.__init__('Rafael dos Santos', '1234' , 1000)
+
+print (ContaCorrente.__dict__)
+
+ContaCorrente.deposito(500)
+print (ContaCorrente.__dict__)
+
+ContaCorrente.saque(200)
+print (ContaCorrente.__dict__)
