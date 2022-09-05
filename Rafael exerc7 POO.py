@@ -1,15 +1,12 @@
 
 class Investimento:
-    nome = None
-    numero = None
-    saldo = None
-    taxjur = None
-
-    def __init__(self, nome, num, saldo, tax):
+    
+    def __init__(self, nome, num, saldo, tax, total):
         self.nome = nome
         self.num = num
         self.saldo = saldo
         self.tax = tax
+        self.total = total
        
     def saldo(self):
         return self.saldo
@@ -21,3 +18,5 @@ class Investimento:
     num = input("Conta :")
     saldo = float(input("Informe seu saldo em R$ :"))
     tax = float(input("Informe a taxa de juros :"))        
+    total = (saldo + tax)
+    print(total)
